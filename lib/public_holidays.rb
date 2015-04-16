@@ -22,14 +22,14 @@ module PublicHolidays
     end
   end
 
-  def self.future
+  def self.future(from_date = Date.today)
     configuration.holidays.select do |holiday|
-      holiday > now
+      holiday > from_date
     end
   end
 
-  def self.next
-    future.first
+  def self.next(from_date = Date.today)
+    future(from_date).first
   end
 
   def self.next_working_day(from_date = Date.today)

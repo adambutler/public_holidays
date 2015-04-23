@@ -7,13 +7,21 @@ RSpec.describe PublicHolidays do
     end
   end
 
+  context "#now" do
+    it "returns a Date representing the time now" do
+      now = Date.parse("2015/01/01")
+      Timecop.freeze(now)
+      expect(PublicHolidays.now.to_time.to_i).to eq(now.to_time.to_i)
+    end
+  end
+
   context "#future" do
     it "returns all future public holidays" do
       Timecop.freeze(Date.parse("2015/12/29"))
       future = PublicHolidays.future
-      expect(future.size).to eq(24)
+      expect(future.size).to eq(80)
       expect(future.first).to eq(Date.parse("2016/01/01"))
-      expect(future.last).to eq(Date.parse("2018/12/27"))
+      expect(future.last).to eq(Date.parse("2025/12/26"))
     end
   end
 

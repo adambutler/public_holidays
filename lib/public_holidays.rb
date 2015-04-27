@@ -10,6 +10,10 @@ module PublicHolidays
     def is_holiday?
       PublicHolidays.configuration.holidays.include? self
     end
+
+    def is_weekend?
+      self.saturday? || self.sunday?
+    end
   end
 
   def self.now
@@ -40,7 +44,7 @@ module PublicHolidays
     days = 1
     loop do
       date = from_date + days
-      if date.is_holiday?
+      if date.is_holiday? || date.is_weekend?
         days += 1
       else
         break date

@@ -53,6 +53,9 @@ RSpec.describe PublicHolidays do
       Timecop.freeze(Date.parse("2016/01/01"))
       from_date = Date.parse("2016/12/26")
       expect(PublicHolidays.next_working_day(from_date)).to eq(Date.parse("2016/12/28"))
+
+      from_date = Date.parse("2022/01/01")
+      expect(PublicHolidays.next_working_day(from_date)).to eq(Date.parse("2022/01/04"))
     end
   end
 end

@@ -9,7 +9,7 @@ A gem that provides helper functionality for working with dates in which public 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'public_holidays' :git => "git://github.com/adambutler/public_holidays.git", :branch => "master"
+gem 'public_holidays', :git => "git://github.com/adambutler/public_holidays.git", :branch => "master"
 ```
 
 And then execute:

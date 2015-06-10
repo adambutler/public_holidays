@@ -9,7 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Adam Butler"]
   spec.email         = ["adam@littlebigmedia.co.uk"]
   spec.summary       = %q{A gem that provides helper functionality for working with dates in which public holidays are a concern.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

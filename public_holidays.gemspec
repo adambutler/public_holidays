@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = PublicHolidays::VERSION
   spec.authors       = ["Adam Butler"]
   spec.email         = ["adam@littlebigmedia.co.uk"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = %q{A gem that provides helper functionality for working with dates in which public holidays are a concern.}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
   spec.license       = "MIT"
